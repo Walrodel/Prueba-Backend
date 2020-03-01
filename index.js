@@ -43,28 +43,6 @@ const inti = async () => {
 
 inti();
 
-// const client = new mongoClient(dbUrl, {
-//   useUnifiedTopology: true
-// });
-// client.connect(function(err, client) {
-//   console.log("Conectado correctamente al servidor");
-//   const db = client.db(dbName);
-//   const col = db.collection('courses');
-//   col.find().toArray(function(err, result) {
-//     if (err) throw err;
-//     if (result.length > 0) {
-//       client.close();
-//       return;
-//     }
-//     axios.get(appUrlData).then(resultJs => {
-//       const inserResult = JSON.parse(resultJs.data.toString().split('=')[1]);
-//       db.collection('courses').insertMany(inserResult);
-//       client.close();
-//     });
-//   });
-// });
-
-
 app.get('/courses', async (req, res) => {
   coursesService.cosultar(req.query)
     .then(result => {
