@@ -1,0 +1,11 @@
+{
+    "app": {
+        "port": 3000,
+        "urlData": "https://www.techtransit.com/mission.courses/coursesData.js"
+    },
+    "db": {
+        "host": "localhost",
+        "port": 27017,
+        "name": "catalog"
+    }
+}
