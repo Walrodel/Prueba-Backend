@@ -10,13 +10,6 @@ let dbPort = config.get('db.port');
 let dbName = config.get('db.name');
 let dbUrl = `mongodb://${dbHost}:${dbPort}`;
 
-
-// module.exports = async () => {
-//   // Conectamos al servidor
-// //  await client.connect();
-//
-//   return "Hoal" //client.db(dbName); // retornamos la conexión con el nombre de la bd a usar
-// };
 module.exports.cosultar = async (query) => {
   return new Promise(async (resolve, reject) => {
     let filter = {};
