@@ -1,9 +1,5 @@
-const axios = require("axios"),
-  mongoClient = require('mongodb').MongoClient,
+const mongoClient = require('mongodb').MongoClient,
   config = require('config');
-
-let appPort = config.get('app.port');
-let appUrlData = config.get('app.urlData');
 
 let dbHost = config.get('db.host');
 let dbPort = config.get('db.port');

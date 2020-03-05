@@ -2,16 +2,10 @@ const express = require("express"),
   path = require("path"),
   app = express(),
   axios = require("axios"),
-  mongoClient = require('mongodb').MongoClient,
   config = require('config');
 
 let appPort = config.get('app.port');
 let appUrlData = config.get('app.urlData');
-
-let dbHost = config.get('db.host');
-let dbPort = config.get('db.port');
-let dbName = config.get('db.name');
-let dbUrl = `mongodb://${dbHost}:${dbPort}`;
 
 const coursesService = require('./services/coursesService');
 const inti = async () => {
